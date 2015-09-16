@@ -140,13 +140,13 @@ public:
   class MIB {
   public:
     /**
-     * @override SNMP::MIB
+     * @override{SNMP::MIB}
      * Return object identity root for given mib.
      */
     virtual const uint8_t* get_oid() = 0;
 
     /**
-     * @override SNMP::MIB
+     * @override{SNMP::MIB}
      * Check if the given protocol data unit is a request to the mib.
      * Returns true and value for SNMP::GET in given protocol data
      * unit, otherwise false.
@@ -182,7 +182,7 @@ public:
     }
 
     /**
-     * @override SNMP::MIB
+     * @override{SNMP::MIB}
      * Return object identity root for MIB-2 SYSTEM.
      */
     virtual const uint8_t* get_oid()
@@ -191,7 +191,7 @@ public:
     }
 
     /**
-     * @override SNMP::MIB
+     * @override{SNMP::MIB}
      * Handle SNMP MIB-2 System objects SNMP requests. Returns true and
      * value for SNMP::GET in given protocol data unit, otherwise false.
      * @param[in,out] pdu protocol data unit.
