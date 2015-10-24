@@ -220,6 +220,7 @@ void setup()
   uart.begin(9600);
   trace.begin(&uart, PSTR("CosaSNMP: started"));
   Watchdog::begin();
+  AnalogPin::powerup();
 
   // Start ethernet controller and request network address for hostname
 #if defined(USE_FIXED_IP)
