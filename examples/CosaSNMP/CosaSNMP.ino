@@ -54,7 +54,7 @@
 #include "Cosa/AnalogPin.hh"
 #include "Cosa/Trace.hh"
 #include "Cosa/Watchdog.hh"
-#include "Cosa/IOStream/Driver/UART.hh"
+#include "Cosa/UART.hh"
 
 // Comment this out to remove some tracing and reduce memory usage
 #define PRINT_PDU
