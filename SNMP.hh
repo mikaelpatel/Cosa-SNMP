@@ -143,7 +143,7 @@ public:
      * @override{SNMP::MIB}
      * Return object identity root for given mib.
      */
-    virtual const uint8_t* get_oid() = 0;
+    virtual const uint8_t* oid() = 0;
 
     /**
      * @override{SNMP::MIB}
@@ -185,7 +185,7 @@ public:
      * @override{SNMP::MIB}
      * Return object identity root for MIB-2 SYSTEM.
      */
-    virtual const uint8_t* get_oid()
+    virtual const uint8_t* oid()
     {
       return (OID);
     }

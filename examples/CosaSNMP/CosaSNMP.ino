@@ -92,7 +92,7 @@ public:
    * @override SNMP::MIB
    * Return object identity root for Arduino MIB.
    */
-  virtual const uint8_t* get_oid()
+  virtual const uint8_t* oid()
   {
     return (OID);
   }
@@ -124,7 +124,7 @@ ARDUINO_MIB::is_request(SNMP::PDU& pdu)
   if(pdu.oid.length > (mib_baselen + 2)) return (false);
 
   // Match with Arduino MIB OID root
-  int sys = pdu.oid.match(get_oid());
+  int sys = pdu.oid.match(oid());
   if (sys < -1) return (false); // MIB is greater than what we deal with
   int index = ((pdu.oid.length == (mib_baselen + 2)) ? pdu.oid.name[mib_baselen+1] : -1);
   // Get next value request; adjust sys and index references to next
@@ -230,7 +230,7 @@ void setup()
 #endif
 
   // Print the given or default network address
-  ethernet.get_addr(ip, subnet);
+  ethernet.addr(ip, subnet);
   trace << PSTR("IP = ");
   INET::print_addr(trace, ip);
   trace << endl;
