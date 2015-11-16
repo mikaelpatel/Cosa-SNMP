@@ -47,7 +47,9 @@
 #include <DHCP.h>
 #include <DNS.h>
 #include <SNMP.h>
+#include <W5X00.h>
 #include <W5100.h>
+// #include <W5200.h>
 
 #include "Cosa/Memory.h"
 #include "Cosa/InputPin.hh"
@@ -74,6 +76,7 @@ OutputPin sd(Board::D4, 1);
 #endif
 
 W5100 ethernet(mac);
+// W5200 ethernet(mac);
 
 /**
  * Arduino MIB OID(1.3.6.1.4.1.36582)
